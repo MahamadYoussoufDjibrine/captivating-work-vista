@@ -9,19 +9,27 @@ const Index = () => {
   const projects = [
     {
       id: 1,
-      title: "Project Title 1",
-      description: "Add your project description here. Describe the technologies used, challenges solved, and impact created.",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
-      link: "https://your-project-link.com",
-      github: "https://github.com/your-username/project1"
+      title: "A-476909 Project",
+      description: "A modern web application showcasing advanced React development skills with responsive design and interactive features. Built with cutting-edge technologies for optimal user experience.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      link: "https://preview--a-476909.lovable.app/",
+      github: "#"
     },
     {
       id: 2,
-      title: "Project Title 2", 
-      description: "Add your second project description here. Highlight key features and your role in the development.",
-      technologies: ["Node.js", "Express", "MongoDB"],
-      link: "https://your-project-link.com",
-      github: "https://github.com/your-username/project2"
+      title: "Tchad Future Pathways Bot", 
+      description: "An intelligent chatbot application designed to provide guidance and pathways for users in Chad. Features AI-powered conversations and user-friendly interface for educational and career guidance.",
+      technologies: ["React", "AI Integration", "Chat Interface", "TypeScript"],
+      link: "https://preview--tchad-future-pathways-bot.lovable.app/",
+      github: "#"
+    },
+    {
+      id: 3,
+      title: "Tchadian Santé Mobile Info",
+      description: "A comprehensive mobile health information platform for Chad, providing accessible healthcare information and resources. Features responsive design optimized for mobile devices.",
+      technologies: ["React", "Mobile-First Design", "Health Tech", "Responsive UI"],
+      link: "https://preview--tchadian-sante-mobile-info.lovable.app/",
+      github: "#"
     }
   ];
 
@@ -162,13 +170,17 @@ const Index = () => {
                     ))}
                   </div>
                   <div className="flex space-x-3">
-                    <Button variant="outline" size="sm">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
                     </Button>
-                    <Button variant="outline" size="sm">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
