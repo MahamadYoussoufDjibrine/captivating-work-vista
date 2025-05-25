@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -40,6 +41,23 @@ const Index = () => {
     { category: "Tools", items: ["Git", "Docker", "AWS", "Figma"] }
   ];
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleViewWork = () => {
+    scrollToSection('projects');
+  };
+
+  const handleDownloadCV = () => {
+    // TODO: Replace with your actual CV Google Drive link
+    console.log('CV download functionality - please provide the Google Drive link');
+    // window.open('YOUR_GOOGLE_DRIVE_CV_LINK', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Navigation */}
@@ -48,11 +66,11 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-gray-900">Mahamat Youssouf Djibrine</h1>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-              <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
-              <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+              <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 transition-colors">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 transition-colors">About</button>
+              <button onClick={() => scrollToSection('projects')} className="text-gray-700 hover:text-blue-600 transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('skills')} className="text-gray-700 hover:text-blue-600 transition-colors">Skills</button>
+              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 transition-colors">Contact</button>
             </div>
           </div>
         </div>
@@ -72,10 +90,10 @@ const Index = () => {
                 I specialize in building modern web applications with cutting-edge technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Button onClick={handleViewWork} size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
                   View My Work
                 </Button>
-                <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
+                <Button onClick={handleDownloadCV} variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
                   Download CV
                 </Button>
               </div>
