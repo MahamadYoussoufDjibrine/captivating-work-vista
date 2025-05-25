@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -39,7 +38,7 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900">Portfolio</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Mahamat Youssouf Djibrine</h1>
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
               <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
@@ -58,7 +57,7 @@ const Index = () => {
             <div className="lg:w-1/2 text-center lg:text-left">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Hello, I'm
-                <span className="block text-blue-600">Your Name</span>
+                <span className="block text-blue-600">Mahamat Youssouf Djibrine</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 A passionate developer creating amazing digital experiences. 
@@ -243,7 +242,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <p>&copy; 2024 Your Name. All rights reserved.</p>
+          <p>&copy; 2024 Mahamat Youssouf Djibrine. All rights reserved.</p>
           <div className="flex justify-center space-x-6 mt-4">
             <a href="#" className="hover:text-blue-400 transition-colors">
               <Github className="w-5 h-5" />
