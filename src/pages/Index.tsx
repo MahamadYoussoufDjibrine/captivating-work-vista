@@ -60,6 +60,10 @@ const Index = () => {
     window.open('mailto:mahamadyoussoufdjibrine@gmail.com', '_blank');
   };
 
+  const handleLinkedInClick = () => {
+    window.open('https://www.linkedin.com/in/mahamat-youssouf-djibrine-336166276/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BZnmMCfsETY2Svs9r7UE4ig%3D%3D', '_blank');
+  };
+
   const handleInstagramClick = () => {
     window.open('https://www.threads.com/@mht0319?xmt=AQF046w_K1Pvt1OTozJBrhGG5Xn0VxK0kqE6pv056da-yw0', '_blank');
   };
@@ -155,7 +159,7 @@ const Index = () => {
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me
                 </Button>
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={handleLinkedInClick}>
                   <Linkedin className="w-4 h-4 mr-2" />
                   LinkedIn
                 </Button>
@@ -283,9 +287,9 @@ const Index = () => {
             <a href="#" className="hover:text-blue-400 transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-blue-400 transition-colors">
+            <button onClick={handleLinkedInClick} className="hover:text-blue-400 transition-colors">
               <Linkedin className="w-5 h-5" />
-            </a>
+            </button>
             <button onClick={handleInstagramClick} className="hover:text-blue-400 transition-colors">
               <Instagram className="w-5 h-5" />
             </button>
