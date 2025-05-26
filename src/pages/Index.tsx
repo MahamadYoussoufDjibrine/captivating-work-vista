@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -53,9 +52,7 @@ const Index = () => {
   };
 
   const handleDownloadCV = () => {
-    // TODO: Replace with your actual CV Google Drive link
-    console.log('CV download functionality - please provide the Google Drive link');
-    // window.open('YOUR_GOOGLE_DRIVE_CV_LINK', '_blank');
+    window.open('https://drive.google.com/file/d/1Aopg_WW2eA15SZYUcQEzQRvhVftROX6n/view?usp=drive_link', '_blank');
   };
 
   return (
