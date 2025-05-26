@@ -1,5 +1,6 @@
+
 import { useState } from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -53,6 +54,14 @@ const Index = () => {
 
   const handleDownloadCV = () => {
     window.open('https://drive.google.com/file/d/1Aopg_WW2eA15SZYUcQEzQRvhVftROX6n/view?usp=drive_link', '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.open('mailto:mahamadyoussoufdjibrine@gmail.com', '_blank');
+  };
+
+  const handleInstagramClick = () => {
+    window.open('https://www.threads.com/@mht0319?xmt=AQF046w_K1Pvt1OTozJBrhGG5Xn0VxK0kqE6pv056da-yw0', '_blank');
   };
 
   return (
@@ -142,7 +151,7 @@ const Index = () => {
                 My goal is to create solutions that not only meet requirements but exceed expectations.
               </p>
               <div className="flex space-x-4">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={handleEmailClick}>
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me
                 </Button>
@@ -247,7 +256,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
-              <span>your.email@example.com</span>
+              <span>mahamadyoussoufdjibrine@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5" />
@@ -259,7 +268,7 @@ const Index = () => {
             </div>
           </div>
           <div className="flex justify-center space-x-4">
-            <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100" onClick={handleEmailClick}>
               Get In Touch
             </Button>
           </div>
@@ -277,9 +286,9 @@ const Index = () => {
             <a href="#" className="hover:text-blue-400 transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-blue-400 transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
+            <button onClick={handleInstagramClick} className="hover:text-blue-400 transition-colors">
+              <Instagram className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </footer>
