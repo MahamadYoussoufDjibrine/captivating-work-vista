@@ -31,6 +31,22 @@ const Index = () => {
       technologies: ["React", "Mobile-First Design", "Health Tech", "Responsive UI"],
       link: "https://preview--tchadian-sante-mobile-info.lovable.app/",
       github: "#"
+    },
+    {
+      id: 4,
+      title: "OneCS Platform",
+      description: "A comprehensive platform showcasing computer science resources and services. Features modern design with interactive elements and user-friendly navigation for educational content.",
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      link: "https://onecs.netlify.app/",
+      github: "#"
+    },
+    {
+      id: 5,
+      title: "Food Bank Application",
+      description: "A community-focused food bank management system designed to help organizations track donations and distribute food resources efficiently. Features intuitive interface for both donors and administrators.",
+      technologies: ["Web Technologies", "Community Focus", "Resource Management", "Responsive UI"],
+      link: "https://foodbank1.netlify.app/",
+      github: "#"
     }
   ];
 
